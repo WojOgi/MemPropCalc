@@ -9,10 +9,8 @@ public class SelectivityCalculator {
     }
 
     public float calculateSelectivity(float permeanceGasA, float permeanceGasB) {
-        if (permeanceGasA > permeanceGasB) {
-            return permeanceGasA / permeanceGasB;
-        }
-        return permeanceGasB / permeanceGasA;
+
+        return permeanceGasA / permeanceGasB;
     }
 
     public float getPermeanceGasA() {

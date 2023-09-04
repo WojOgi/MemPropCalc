@@ -6,7 +6,7 @@ public class Communication {
     }
 
     public void welcomeMessage() {
-        System.out.println("Welcome to Membrane Calculator!");
+        System.out.println("Welcome to Membrane Gas Separation Properties Calculator!");
     }
 
     public void queryForActiveMembraneArea() {
@@ -18,7 +18,7 @@ public class Communication {
     }
 
     public void queryForGasName(){
-        System.out.println("What is the gas to be calculated?");
+        System.out.println("What is the name of the gas to be calculated?");
     }
 
     public void queryForMeasurementPressure() {
@@ -39,5 +39,9 @@ public class Communication {
 
     public void needContinue() {
         System.out.println("Do you want to continue? Yes/No");
+    }
+
+    public void queryForSelectivityCalc() {
+        System.out.println("Do you want to calculate selectivity? Yes/No");
     }
 }

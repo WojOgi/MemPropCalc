@@ -4,6 +4,7 @@ import membranes.Membrane;
 
 import java.util.*;
 
+import static calculations.Service.calculateSelectivitesForAllPairs;
 import static calculations.Service.collectDataFromUser;
 
 public class Main {
@@ -27,20 +28,13 @@ public class Main {
 
         System.out.println(gasPermeances);
 
-        System.out.println("Do you want to calculate selectivity?");
-        String query = scanner.next();
+        Map<String, Float> selectivities = calculateSelectivitesForAllPairs(gasPermeances);
+        for (Map.Entry<String, Float> entry : selectivities.entrySet()) {
 
-        while (!query.equals("No")) {
-            communication.whichSelectivityDoYouNeed();
-            String gas1 = scanner.next();
-            String gas2 = scanner.next();
-            SelectivityCalculator selectivityCalculator = new SelectivityCalculator();
-            float selectivity = selectivityCalculator
-                    .calculateSelectivity(gasPermeances.get(gas1), gasPermeances.get(gas2));
-            System.out.println("The selectivity for gas pair: " + gas1 + " and " + gas2 + " is: " + selectivity);
-            System.out.println(gasPermeances);
-            communication.needContinue();
-            query = scanner.next();
+            String key = entry.getKey();
+            Float value = entry.getValue();
+            System.out.println(key + " : " + value);
         }
+
     }
 }
