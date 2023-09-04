@@ -5,9 +5,9 @@ import membranes.Membrane;
 
 public class PermeanceCalculator {
 
-    private Membrane membrane;
+    private final Membrane membrane;
 
-    private PermeanceExperiment permeanceExperiment;
+    private final PermeanceExperiment permeanceExperiment;
 
     public PermeanceCalculator(Membrane membrane, PermeanceExperiment permeanceExperiment) {
         this.membrane = membrane;
@@ -22,19 +22,4 @@ public class PermeanceCalculator {
         return permeanceT / 0.000001F;
     }
 
-    public Membrane getMembrane() {
-        return membrane;
-    }
-
-    public void setMembrane(Membrane membrane) {
-        this.membrane = membrane;
-    }
-
-    public PermeanceExperiment getPermeanceExperiment() {
-        return permeanceExperiment;
-    }
-
-    public void setPermeanceExperiment(PermeanceExperiment permeanceExperiment) {
-        this.permeanceExperiment = permeanceExperiment;
-    }
 }

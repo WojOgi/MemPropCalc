@@ -32,16 +32,4 @@ public class Communication {
         System.out.println("Enter the measured time:");;
     }
 
-
-    public void whichSelectivityDoYouNeed() {
-        System.out.println("Name two gases to calculate selectivity:");
-    }
-
-    public void needContinue() {
-        System.out.println("Do you want to continue? Yes/No");
-    }
-
-    public void queryForSelectivityCalc() {
-        System.out.println("Do you want to calculate selectivity? Yes/No");
-    }
 }

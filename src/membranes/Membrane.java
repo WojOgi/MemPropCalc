@@ -2,7 +2,7 @@ package membranes;
 
 public class Membrane {
 
-    private float activeArea;
+    private final float activeArea;
 
     public Membrane(float activeArea) {
         this.activeArea = activeArea;
@@ -10,9 +10,5 @@ public class Membrane {
 
     public float getActiveArea() {
         return activeArea;
-    }
-
-    public void setActiveArea(float activeArea) {
-        this.activeArea = activeArea;
     }
 }
