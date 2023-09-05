@@ -1,4 +1,4 @@
-package communication;
+package messaging;
 
 public class Communication {
 

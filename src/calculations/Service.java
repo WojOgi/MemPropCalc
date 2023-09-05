@@ -1,7 +1,7 @@
 package calculations;
 
 import Gas.Gas;
-import communication.Communication;
+import messaging.Communication;
 import measurements.PermeanceExperiment;
 import membranes.Membrane;
 
@@ -28,6 +28,7 @@ public class Service {
             gasPermeances.put(gas.getGasName(), permeanceGPU);
             System.out.println("Gas permeance for " + gas
                     .getGasName() + " is: " + permeanceGPU);
+            System.out.println();
         }
     }
 
@@ -43,7 +44,7 @@ public class Service {
                         .calculateSelectivity((Float) gasPermeances.get(gasList.get(i)), (Float) gasPermeances.get(gasList.get(j)));
                 String selectivityAnnotation = gasList.get(i) + "/" + gasList.get(j);
 
-                if (!(gasList.get(i).equals(gasList.get(j))) && selectivityForThisPair>1) {
+                if (!(gasList.get(i).equals(gasList.get(j))) && selectivityForThisPair > 1) {
                     calculatedSeletivities.put(selectivityAnnotation, selectivityForThisPair);
                 }
             }
