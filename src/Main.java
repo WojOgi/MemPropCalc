@@ -1,10 +1,9 @@
-import messaging.Communication;
 import membranes.Membrane;
+import messaging.Communication;
 import messaging.Printer;
 
 import java.util.*;
 
-import static calculations.Service.calculateSelectivitesForAllPairs;
 import static calculations.Service.collectDataFromUser;
 
 public class Main {

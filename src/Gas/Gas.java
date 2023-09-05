@@ -8,7 +8,6 @@ public class Gas {
         this.gasName = gasName;
     }
 
-
     public String getGasName() {
         return gasName;
     }
