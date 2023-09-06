@@ -21,7 +21,7 @@ public class Main {
 
         Map<String, Float> gasPermeances = new HashMap<>();
         List<String> gasList = new ArrayList<>();
-        int numberOfGases = 0;
+        int numberOfGases;
         boolean validInput = false;
 
         while (!validInput) {

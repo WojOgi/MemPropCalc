@@ -1,9 +1,9 @@
 package calculations;
 
 import Gas.Gas;
-import messaging.Communication;
 import measurements.PermeanceExperiment;
 import membranes.Membrane;
+import messaging.Communication;
 
 import java.util.*;
 
@@ -25,6 +25,7 @@ public class Service {
             PermeanceExperiment permeanceExperiment = new PermeanceExperiment(time, volume, pressure);
             PermeanceCalculator permeanceCalculator = new PermeanceCalculator(membrane, permeanceExperiment);
             float permeanceGPU = permeanceCalculator.calculatePermeance();
+
             gasPermeances.put(gas.getGasName(), permeanceGPU);
             System.out.println("Gas permeance for " + gas
                     .getGasName() + " is: " + permeanceGPU);
