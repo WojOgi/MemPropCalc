@@ -4,13 +4,17 @@ public class Communication {
 
     public Communication() {
     }
+    public void welcomeASCIArt(){
+
+        System.out.println();
+    }
 
     public void welcomeMessage() {
         System.out.println("Welcome to Membrane Gas Separation Properties Calculator!");
     }
 
     public void queryForActiveMembraneArea() {
-        System.out.println("What is the active area of the membrane?");
+        System.out.println("What is the active area of the membrane in cm2?");
     }
 
     public void queryForNumberOfGasesMeasured(){
@@ -26,10 +30,10 @@ public class Communication {
     }
 
     public void queryForMeasuredVolume() {
-        System.out.println("Enter the measured volume:");;
+        System.out.println("Enter the measured volume in ml:");;
     }
     public void queryForMeasuredTime() {
-        System.out.println("Enter the measured time:");;
+        System.out.println("Enter the measured time in s:");;
     }
 
 }

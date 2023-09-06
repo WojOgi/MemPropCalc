@@ -21,14 +21,21 @@ public class Main {
 
         Map<String, Float> gasPermeances = new HashMap<>();
         List<String> gasList = new ArrayList<>();
+        Integer numberOfGases;
 
-        communication.queryForNumberOfGasesMeasured();
-        int numberOfGases = scanner.nextInt();
 
-        collectDataFromUser(communication, scanner, membrane, gasPermeances, gasList, numberOfGases);
+        try {
+            communication.queryForNumberOfGasesMeasured();
 
-        printer.createATableOfSelectivities(gasPermeances);
-        printer.createATableOfPermeances(gasPermeances);
+            numberOfGases = scanner.nextInt();
+            collectDataFromUser(communication, scanner, membrane, gasPermeances, gasList, numberOfGases);
 
+            printer.createATableOfSelectivities(gasPermeances);
+            printer.createATableOfPermeances(gasPermeances);
+
+        } catch (InputMismatchException e) {
+            System.out.println("Input has to be an integer! Restart the progam.");
+
+        }
     }
 }

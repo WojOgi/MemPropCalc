@@ -11,7 +11,7 @@ public class Service {
     public Service() {
     }
 
-    public static void collectDataFromUser(Communication communication, Scanner scanner, Membrane membrane, Map<String, Float> gasPermeances, List<String> gasList, int numberOfGases) {
+    public static void collectDataFromUser(Communication communication, Scanner scanner, Membrane membrane, Map<String, Float> gasPermeances, List<String> gasList, Integer numberOfGases) {
         for (int i = 0; i < numberOfGases; i++) {
             communication.queryForGasName();
             Gas gas = new Gas(scanner.next());
